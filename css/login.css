@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css?family=Questrial&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  font-size: medium;
+}
+body {
+  height: 100vh;
+  padding: 0 20px;
+  margin: 0;
+  overflow-x: hidden;
+  background-image: url("../img/test3.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  font-family: "Questrial", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+button {
+  padding: 10px 15px;
+  margin-top: 5px;
+  border-radius: 3px;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  font-family: "Questrial", sans-serif;
+  background-color: #b0c4de;
+}
+
+a {
+  text-decoration: none;
+  position: relative;
+  color: white;
+  font-size: 12.5px;
+}
+
+form.login {
+  transform: translateY(6rem);
+  border-radius: 3px;
+  max-width: 370px;
+  height: 450px;
+  padding-top: 5rem !important;
+  padding: 0 2rem;
+  background: url("../img/footer-bg.jpg");
+  /* background: #1f2229; */
+  /* background: rgb(0, 0, 0, 0.9); */
+  margin: 0 auto;
+  position: relative;
+}
+
+form.login input {
+  background: transparent;
+  /* background: rgb(255, 255, 255, 0.2); */
+}
+
+.inputs {
+  margin-top: 5rem;
+}
+.inputs input {
+  padding: 20px 15px;
+  width: 100%;
+  /* border-radius: 2px; */
+  outline: none;
+  border: 0;
+  border-bottom: 2px solid #ccc;
+  color: white;
+  margin-bottom: 20px;
+  transition: 0.4s;
+}
+.inputs input:focus {
+  border-color: rgb(255, 100, 0);
+}
+
+.logo {
+  position: absolute;
+  top: -3rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  margin: auto;
+  width: 200px;
+  height: 200px;
+}
+
+form.login button {
+  background: rgb(255, 100, 0);
+  /* background: linear-gradient(-45deg, #d65a31, #a34a28); */
+  width: 50%;
+  font-size: 13px;
+  text-transform: uppercase;
+  padding: 15px;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  margin-bottom: 20px;
+  clip-path: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0);
+}
+
+form.login a {
+  color: rgb(255, 100, 0);
+}
+
+p {
+  font-size: 13px;
+  color: #fff;
+}
+.btnlog{
+	display: flex;
+	justify-content: center;
+  }

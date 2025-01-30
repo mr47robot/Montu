@@ -1,0 +1,446 @@
+* {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+body {
+  overflow-x: hidden;
+  background-color: #181a1b;
+  display: flex;
+  justify-content: center;
+  margin: 0%;
+  padding: 0%;
+}
+::-webkit-scrollbar {
+  background-color: #22242a;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #2f323a;
+}
+header {
+  position: fixed;
+  background: #2f323a;
+  padding: 0px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  z-index: 100;
+}
+
+.user-img {
+  width: 40px;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 60px;
+}
+.show {
+  background-color: #22242a;
+  width: 80%;
+  /* position: absolute; */
+  height: 59%;
+  padding: 10px;
+  display: flex;
+  /* height: 100%; */
+  padding-top: 19px;
+  border-bottom-right-radius: 75% 320%;
+}
+.active {
+  margin-left: 20px;
+}
+.sub-menu-wrab {
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  width: 320px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.sub-menu-wrab.menu-open {
+  max-height: 400px;
+}
+.sub-menu {
+  background-color: #2f323a;
+  padding: 20px;
+  margin: 20px 10px;
+  position: relative;
+}
+.sub-menu::before {
+  content: "";
+  top: -20px;
+  right: 50px;
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #2f323a;
+  border-left: 10px solid transparent;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  /* background-color: red; */
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.user-info h2 {
+  text-align: center;
+  font-weight: 500;
+}
+.user-info img {
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  color: #525252;
+  margin: 12px 0;
+  justify-content: space-between;
+  background-color: #525252;
+  padding: 10px;
+  font-size: 15px;
+}
+.contain span {
+  margin-left: 5px;
+  transition: transform 0.5s;
+}
+.sub-menu-link:hover span {
+  transform: translateX(5px);
+  font-size: 15.5px;
+}
+.sub-menu-link:hover i {
+  font-size: 15.5px;
+}
+.sidebar {
+  background: #2f323a;
+  margin-top: 70px;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  transition: 1s;
+  transition-property: left;
+}
+.sidebar-header {
+  background-color: #22242a;
+  padding: 5px;
+}
+
+.sidebar .profile_image {
+  width: 60%;
+  height: 100px;
+  /* border-radius: 100px; */
+  margin-bottom: 10px;
+}
+
+.sidebar h4 {
+  color: #ccc;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.sidebar a:hover {
+  background: #19b3d3;
+}
+
+.sidebar i {
+  padding-right: 10px;
+  transition: 1s;
+}
+
+label #sidebar_btn {
+  z-index: 1;
+  color: #fff;
+  position: fixed;
+  cursor: pointer;
+  left: 50px;
+  font-size: 20px;
+  margin: 6px 0;
+  transition: 0.5s;
+  transition-property: color;
+}
+
+label #sidebar_btn:hover {
+  color: #19b3d3;
+}
+
+#check:checked ~ .sidebar .active {
+  margin-left: 0;
+  transition: 1s;
+}
+#check:checked ~ .sidebar {
+  left: -190px;
+  transition: 1s;
+}
+#check:checked ~ .sidebar center {
+  /* background-color: #2f323a; */
+  transition: 1s ease;
+  border-radius: 0 0 50%;
+}
+#check:checked ~ .sidebar center img {
+  /* display: none; */
+  width: 0px;
+  transition: 5s;
+}
+#check:checked ~ .sidebar a span {
+  display: none;
+}
+
+#check:checked ~ .sidebar a {
+  font-size: 20px;
+  margin-left: 170px;
+  width: 80px;
+  transition: 1s;
+}
+
+#check:checked ~ .content {
+  margin-left: 60px;
+}
+
+#check {
+  display: none;
+}
+
+/* end nav bar & sidebar */
+
+.content {
+  margin-left: 250px;
+  /* background: url("../Pics/logo\ on\ dark\ wall.png") no-repeat;
+  background-position: center;
+  background-size: cover; */
+  height: 85vh;
+  width: 100%;
+  margin-top: 90px;
+  transition: 1s;
+  z-index: 1;
+}
+
+.sports {
+  width: 100%;
+  height: 100%;
+  /* background-color: #181a1b; */
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.sports-item {
+  position: relative;
+  width: 350px;
+  margin-top: 0;
+  margin-right: 15px;
+  margin-left: 15px;
+  margin-bottom: 15px;
+  height: 250px;
+  background-color: #2f323a;
+  border-radius: 5%;
+  overflow: hidden;
+}
+.sports-item::before {
+  content: "";
+  position: absolute;
+
+  inset: -90px -90px;
+  /* inset: -10px 140px; */
+  background: linear-gradient(315deg, #00ccff, #d400d4);
+  /* background: linear-gradient(315deg, #870000, #190a05); */
+  /* background: linear-gradient(315deg, #009fff, #ec2f4b); */
+  transition: 0.5s;
+  animation: animate 5s linear infinite;
+}
+.sports-item:hover::before {
+  /* inset: -20px 0px; */
+  inset: -90px 120px;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.sports-item::after {
+  content: "";
+  position: absolute;
+  inset: 7px;
+  background-color: #2f323a;
+  border-radius: 5%;
+  z-index: 1;
+}
+.sports-content {
+  position: absolute;
+  inset: 7px;
+  border: 5px solid #181a1b;
+  border-radius: 5%;
+  z-index: 3;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sports-content img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 3;
+}
+.sports-item:hover .sports-content img {
+  opacity: 0;
+}
+.sports-content h2 {
+  position: relative;
+  font-size: 1.5em;
+  text-align: center;
+  color: fff;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.sports-content h2 span {
+  font-weight: 300;
+  font-size: 0.75em;
+}
+.sports-content a {
+  position: relative;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #fff;
+  color: black;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.sports-content a:hover {
+  letter-spacing: 0.2em;
+}
+
+/* .sports {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sports-item {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background-color: #2f323a;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.sports-item::before {
+  content: "";
+  position: absolute;
+  inset: -10px 140px;
+  background: linear-gradient(315deg, #00ccff, #d400d4);
+  transition: 0.5s;
+  animation: animate 4s linear infinite;
+}
+.sports-item:hover::before {
+  inset: -20px 0px;
+}
+@keyframes animate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+.sports-item::after {
+  content: "";
+  position: absolute;
+  inset: 6px;
+  background-color: #2f323a;
+  border-radius: 50%;
+  z-index: 1;
+}
+.sports-content {
+  position: absolute;
+  inset: 30px;
+  border: 6px solid black;
+  border-radius: 50%;
+  z-index: 3;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.sports-content img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.5s;
+  pointer-events: none;
+  z-index: 3;
+}
+.sports-item:hover .sports-content img {
+  opacity: 0;
+}
+.sports-content h2 {
+  position: relative;
+  font-size: 1.5em;
+  text-align: center;
+  color: fff;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.sports-content h2 span {
+  font-weight: 300;
+  font-size: 0.75em;
+}
+.sports-content a {
+  position: relative;
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: #fff;
+  color: black;
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 1.25em;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+}
+
+.sports-content a:hover {
+  letter-spacing: 0.2em;
+} */

@@ -1,0 +1,177 @@
+body{
+    background-image: url("../img/test3.jpg");
+	background-position: center;
+	background-repeat: no-repeat;
+	font-family: "Poppins", sans-serif;;
+}
+a{
+	text-decoration: none;
+}
+table {
+	
+	margin-top: 10px;
+	border: none;
+	border-collapse:unset;
+	/* margin: 0; */
+	padding: 0;
+	width: 100%;
+	table-layout: fixed;
+	border-spacing: 0px 3px;
+
+}
+.back img{
+	width: 20%;
+	padding: 10px;
+	background-color: white;
+	border-radius: 50%;
+}
+.elol{
+	display: block;
+}
+.vk150{
+	border: none;
+	width: 100%;
+	resize: none;
+	height: 50px;
+	padding: 8px;
+	border-radius: 14px;
+}
+table caption {
+	font-size: 1.5em;
+	margin: .5em 0 .75em;
+}
+table tr {
+	background-color: #fff;
+	border: 1px solid #e1e5e9;
+	padding: .35em;
+	border-radius: 3px;
+	overflow: hidden;
+}
+table thead tr:first-child {
+    border: 1px solid  ;
+}
+table th,
+table td {
+	padding: 1.4em;
+	text-align: center;
+	color: #9da9b9;
+	font-size: 14px;
+	
+	background: url("../img/footer-bg.jpg");
+	overflow: hidden;
+
+}
+
+table td:nth-child(4) {
+	font-size: 18px;
+}
+
+table th {
+	font-size: .85em;
+	letter-spacing: .1em;
+	text-transform: uppercase;
+	background: url("../img/footer-bg.jpg");
+	color: #FFF;
+}
+
+table tbody tr td .btn-invoice {
+	background: #0f82e6;
+	color: #FFF;
+	font-size: 13px;
+	padding: 10px 20px;
+	border: 0;
+	font-family: cursive;
+}
+
+tbody tr:nth-child(even) {
+	background-color: #eee;
+}
+
+tbody tr:nth-child(odd) {
+	background-color: #fff;
+}
+table td:first-child {
+	border-bottom: 0;
+	width: 20%;
+	padding: 0;
+
+}
+@media screen and (max-width: 600px) {
+	table {
+		border: 0;
+	}
+	table caption {
+		font-size: 1.3em;
+	}
+	table thead {
+		border: none;
+		clip: rect(0 0 0 0);
+		height: 1px;
+		margin: -1px;
+		overflow: hidden;
+		position: absolute;
+		width: 1px;
+		padding: 0;
+	}
+	table tr {
+		border-bottom: 3px solid #e1e5e9;
+		display: block;
+		margin-bottom: .625em;
+	}
+	table th,
+	table td {
+		padding: 0.625em;
+	}
+	table td {
+		border-bottom: 1px solid #e1e5e9;
+		display: block;
+		font-size: .8em;
+		text-align: right;
+		color: #9da9b9;
+	}
+	table td::before {
+		content: attr(data-label);
+		float: left;
+		font-weight: bold;
+		text-transform: uppercase;
+		color: #656971;
+	}
+	table td:last-child {
+		border-bottom: 0;
+	}
+
+	table td:nth-child(4) {
+		font-size: 0.8em;
+	}}
+	.btn{
+		
+		margin-top: 10px;
+		background-color: rgb(255, 100, 0);
+		color: white;
+		border:none; 
+		border-radius:10px; 
+		padding:15px;
+		min-height:30px; 
+		min-width: 120px;
+		clip-path: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0);
+		font-size: medium;
+		cursor: pointer;
+		transition: 0.5 ease;
+		margin-left: -20px;
+
+	}
+	.btn-del{
+		margin-top: 10px;
+		background-color: rgb(255, 100, 0);
+		color: white;
+		border:none; 
+		border-radius:10px; 
+		padding:15px;
+		min-height:30px; 
+		min-width: 120px;
+		clip-path: polygon(90% 0, 100% 34%, 100% 100%, 10% 100%, 0 66%, 0 0);
+		font-size: medium;
+		cursor: pointer;
+		transition: 0.5 ease;
+		/* margin-left: 50px; */
+	}

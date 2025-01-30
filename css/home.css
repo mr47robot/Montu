@@ -1,0 +1,256 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  text-transform: capitalize;
+  border: none;
+  /* overflow-x: hidden; */
+}
+
+body {
+  /* overflow: hidden; */
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  background-image: url("../img/logo\ edit\ sport\ copy\ new.png");
+  width: 100px;
+  height: 100px;
+  margin: 25px 0 0 50px;
+  position: fixed;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-position: top right;
+  z-index: 9999;
+}
+.wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(-170deg, rgb(255 100 0), rgb(133 54 3));
+  /* background: linear-gradient(-135deg, #252391, #0c122e); */
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  /* clip-path: circle(25px at calc(0% + 45px) 45px); */
+  clip-path: circle(25px at calc(100% - 45px) 45px);
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .wrapper {
+  clip-path: circle(75%);
+}
+.menu-btn {
+  position: fixed;
+  z-index: 999;
+  right: 20px;
+  /* left: 20px; */
+  top: 20px;
+  height: 50px;
+  width: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(-170deg, rgb(255 100 0), rgb(133 54 3));
+  /* background: linear-gradient(-135deg, #252391, #0c122e); */
+  /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
+  transition: all 0.3s ease-in-out;
+}
+#active:checked ~ .menu-btn {
+  background: #fff;
+  color: rgb(255, 100, 0);
+}
+#active:checked ~ .menu-btn i:before {
+  content: "\f00d";
+}
+.wrapper ul {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  list-style: none;
+  text-align: center;
+}
+.wrapper ul li {
+  margin: 15px 0;
+}
+.wrapper ul li a {
+  color: none;
+  text-decoration: none;
+  font-size: 30px;
+  font-weight: 500;
+  padding: 5px 30px;
+  color: #fff;
+  position: relative;
+  line-height: 50px;
+  transition: all 0.3s ease;
+}
+.wrapper ul li a:after {
+  position: absolute;
+  content: "";
+  background: #fff;
+  width: 100%;
+  height: 50px;
+  left: 0;
+  border-radius: 50px;
+  transform: scaleY(0);
+  z-index: -1;
+  transition: transform 0.3s ease;
+}
+.wrapper ul li a:hover:after {
+  transform: scaleY(1);
+}
+.wrapper ul li a:hover {
+  color: rgb(255, 100, 0);
+}
+input[type="checkbox"] {
+  display: none;
+}
+body {
+  background-color: darkgrey;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* --------------------------------------------------------- */
+.header {
+  height: 700px;
+  width: 100%;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  width: 100%;
+  height: 665px;
+
+  overflow: hidden;
+  z-index: -1;
+}
+
+.child-left-1,
+.child-left-2,
+.child-left-3,
+.child-left-4,
+.child-right-1,
+.child-right-2,
+.child-right-3,
+.child-right-4 {
+  position: absolute;
+  width: 50vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.child-right-1,
+.child-right-2,
+.child-right-3,
+.child-right-4 {
+  margin-left: 50vw;
+}
+
+.left,
+.right {
+  position: relative;
+  width: 50vw;
+  height: 20vh;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.child-left-1,
+.child-right-1 {
+  z-index: 2;
+}
+
+.child-left-1 .left,
+.child-right-1 .left {
+  background-image: url("../img/esports-2021-scaled.jpeg");
+  height: 700px;
+  z-index: -1;
+}
+
+.child-left-1 .right,
+.child-right-1 .right {
+  background-image: url("../img/Physical.jpg");
+  background-position: center;
+  height: 700px;
+  z-index: -1;
+}
+
+.button-left,
+.button-right {
+  width: 100px;
+  height: 50px;
+  background: #1b1b1b;
+  z-index: 20;
+  overflow: hidden;
+  font-family: "Roboto", sans-serif;
+  font-weight: 100;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  transform: skewX(-6deg);
+  margin-top: auto;
+  margin-bottom: auto;
+  text-align: center;
+  padding-top: 14px;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  cursor: pointer;
+}
+
+.button-left:before,
+.button-right:before {
+  content: "";
+  position: absolute;
+  overflow: hidden;
+  top: 25px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100px;
+  z-index: -1;
+  height: 0;
+  background: #fff;
+  color: #1b1b1b;
+  transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+
+.button-left:hover:before,
+.button-right:hover:before {
+  top: 0;
+  height: 50px;
+  padding-top: 14px;
+}
+
+.button-left .view,
+.button-right .view {
+  color: #fff;
+  mix-blend-mode: difference;
+  z-index: 20;
+}
+
+.button-left {
+  margin-left: 19vw;
+}
+
+.button-right {
+  margin-left: 69vw;
+}

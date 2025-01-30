@@ -1,0 +1,351 @@
+* {
+  text-decoration: none;
+  text-transform: capitalize;
+  color: white;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+body {
+  overflow-x: hidden;
+  background-color: #181a1b;
+  /* background-color: #22242a; */
+  display: flex;
+  justify-content: center;
+  margin: 0%;
+  padding: 0%;
+}
+
+::-webkit-scrollbar {
+  background-color: #22242a;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #2f323a;
+}
+
+header {
+  position: fixed;
+  background: #2f323a;
+  padding: 0px;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: center; */
+  z-index: 100;
+}
+
+.user-img {
+  width: 40px;
+  height: 40px;
+  margin-top: 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-right: 60px;
+}
+.show {
+  background-color: #22242a;
+  width: 80%;
+  /* position: absolute; */
+  height: 59%;
+  padding: 10px;
+  display: flex;
+  /* height: 100%; */
+  padding-top: 19px;
+  border-bottom-right-radius: 75% 320%;
+}
+.active {
+  margin-left: 20px;
+}
+.sub-menu-wrab {
+  position: absolute;
+  top: 100%;
+  right: 10px;
+  width: 320px;
+  max-height: 0px;
+  overflow: hidden;
+  transition: max-height 0.5s;
+}
+.sub-menu-wrab.menu-open {
+  max-height: 400px;
+}
+.sub-menu {
+  background-color: #22242a;
+  /* background-color: #2f323a; */
+  padding: 20px;
+  margin: 20px 10px;
+  position: relative;
+}
+.sub-menu::before {
+  content: "";
+  top: -20px;
+  right: 50px;
+  border-top: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #2f323a;
+  border-left: 10px solid transparent;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  /* background-color: red; */
+}
+.user-info {
+  display: flex;
+  align-items: center;
+  color: #fff;
+}
+.user-info h2 {
+  text-align: center;
+  font-weight: 500;
+}
+.user-info img {
+  width: 60px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+.sub-menu-link {
+  display: flex;
+  align-items: center;
+  color: #525252;
+  margin: 12px 0;
+  justify-content: space-between;
+  background-color: #525252;
+  padding: 10px;
+  font-size: 15px;
+}
+.contain span {
+  margin-left: 5px;
+  transition: transform 0.5s;
+}
+.sub-menu-link:hover span {
+  transform: translateX(5px);
+  font-size: 15.5px;
+}
+.sub-menu-link:hover i {
+  font-size: 15.5px;
+}
+.sidebar {
+  background: #2f323a;
+  margin-top: 70px;
+  position: fixed;
+  left: 0;
+  width: 250px;
+  height: 100%;
+  transition: 1s;
+  transition-property: left;
+}
+.sidebar-header {
+  background-color: #22242a;
+  padding: 5px;
+}
+
+.sidebar .profile_image {
+  width: 60%;
+  height: 100px;
+  /* border-radius: 100px; */
+  margin-bottom: 10px;
+}
+
+.sidebar h4 {
+  color: #ccc;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.sidebar a {
+  color: #fff;
+  display: block;
+  width: 100%;
+  line-height: 60px;
+  text-decoration: none;
+  padding-left: 40px;
+  box-sizing: border-box;
+  transition: 0.5s;
+  transition-property: background;
+}
+
+.sidebar a:hover {
+  background: #19b3d3;
+}
+
+.sidebar i {
+  padding-right: 10px;
+  transition: 1s;
+}
+
+label #sidebar_btn {
+  z-index: 1;
+  color: #fff;
+  position: fixed;
+  cursor: pointer;
+  left: 50px;
+  font-size: 20px;
+  margin: 6px 0;
+  transition: 0.5s;
+  transition-property: color;
+}
+
+label #sidebar_btn:hover {
+  color: #19b3d3;
+}
+
+#check:checked ~ .sidebar .active {
+  margin-left: 0;
+  transition: 1s;
+}
+#check:checked ~ .sidebar {
+  left: -190px;
+  transition: 1s;
+}
+#check:checked ~ .sidebar center {
+  /* background-color: #2f323a; */
+  transition: 1s ease;
+  border-radius: 0 0 50%;
+}
+#check:checked ~ .sidebar center img {
+  /* display: none; */
+  width: 0px;
+  transition: 5s;
+}
+#check:checked ~ .sidebar a span {
+  display: none;
+}
+
+#check:checked ~ .sidebar a {
+  font-size: 20px;
+  margin-left: 170px;
+  width: 80px;
+  transition: 1s;
+}
+
+#check:checked ~ .content {
+  margin-left: 60px;
+}
+
+#check {
+  display: none;
+}
+
+/* end nav bar & sidebar */
+
+.content {
+  margin-left: 250px;
+  /* min-height: 100vh; */
+  width: 100%;
+  transition: 1s;
+  z-index: 1;
+  padding: 20px;
+  margin-top: 70px;
+  background-color: #181a1b;
+}
+textarea {
+  border-radius: 24px;
+  outline: none;
+  background-color: #2f323a;
+  width: 80%;
+  /* margin: 0 10px; */
+  border: none;
+  box-shadow: none;
+  padding: 20px;
+  font-size: medium;
+  text-transform: none;
+  height: 80px;
+  resize: none;
+}
+textarea::-webkit-scrollbar {
+  width: 0px;
+  /* height: 0; */
+}
+
+input {
+  border-radius: 24px;
+  outline: none;
+  background-color: #2f323a;
+  width: 80%;
+  /* margin: 0 10px; */
+  border: none;
+  box-shadow: none;
+  padding: 20px;
+  font-size: medium;
+  text-align: center;
+  text-transform: none;
+  height: 20px;
+}
+
+.sandrev {
+  display: flex;
+  justify-content: space-evenly;
+}
+.sandrev button {
+  width: 150px;
+  height: 50px;
+  cursor: pointer;
+  font-size: medium;
+  border-radius: 24px;
+  /* background-color: #22242a; */
+  background-color: transparent;
+  text-align: center;
+}
+.sandrev .saving:hover {
+  background-color: rgba(0, 61, 0, 0.466);
+}
+.sandrev .delete {
+  width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+  background-color: transparent;
+}
+a#db {
+  /* background-color: #19b3d3; */
+  width: 150px;
+  height: 100%;
+  outline: transparent;
+  display: flex;
+  border-radius: 24px;
+  justify-content: center;
+  align-items: center;
+}
+.sandrev .delete:hover {
+  background-color: rgba(61, 0, 0, 0.589);
+}
+
+/* ------------------------------------------------------------------ */
+
+table {
+  width: 100%;
+  min-height: 250px;
+  background-color: #2f323a;
+  padding: 20px;
+  border-spacing: 0 1px;
+}
+caption {
+  text-align: left;
+  padding: 20px 20px 0;
+  background-color: #2f323a;
+  /* background-color: #181a1b; */
+  font-size: 1.2rem;
+}
+table tr td,
+table tr th,
+table tr td,
+table tr th {
+  padding: 20px;
+  text-align: center;
+  background-color: #222329;
+}
+table tr th,
+table tr th {
+  background-color: #181a1b;
+}
+
+tr td:first-child,
+tr th:first-child,
+tr td:first-child,
+tr th:first-child {
+  /* background-color: #19b3d3; */
+  width: 8%;
+}
+
+div.sandrev.two {
+  margin-top: 20px;
+}
