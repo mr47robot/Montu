@@ -715,6 +715,31 @@ if (isset($_POST['toolsname']) ){
                                          header('location:sportdetails.php?do=pd&Code='.$rows['Code'].'');
                   
                 } 
+                else {
+
+                        // Insert team To  DATABASE
+                        $stmt = $con->prepare("
+                        UPDATE
+                               sport
+                        SET 
+                                 Name=?, description=?, logo=?, cover=?
+                        WHERE
+                                Code =?
+                                            ");
+                         $stmt->execute(array(
+
+                            $sportname,$sportdescription,$sportlogo,$sportcover,
+                            $CODE
+                        
+                          ));
+
+                        
+                                                   
+                               header('location:sportdetails.php?do=pd&Code='.$rows['Code'].'');
+
+
+                   
+                    } 
               
 
                 }
