@@ -2,21 +2,25 @@
 # Montu - E-Sports Platform
 
 ## 📌 Overview  
+
 Montu is a web-based platform designed to promote and enhance the e-sports scene in Egypt by connecting gamers and growing the gaming community.
 
 ## 🚀 Features  
+
 - User authentication & account management  
 - E-sports tournament listings & registrations  
 - Real-time game updates & leaderboards  
 - Interactive user profiles & community engagement  
 
 ## 🛠️ Tech Stack  
+
 - **Backend:** PHP, MySQL  
 - **Frontend:** HTML, CSS, Javascript  
 - **Database:** phpMyAdmin
 - **Frameworks & Tools:** Laravel (In Progress), Git, GitHub  
 
 ## 🔧 Installation  
+
 1. Clone the repository:  
    ```bash
    git clone https://github.com/mr47robot/Montu.git
@@ -46,8 +50,11 @@ Feel free to fork this repository and submit pull requests to improve the platfo
 📞 Contact
 
 Developer: Mohamed Ashraf Youssef
+
 📧 Email: ma19988302@gmail.com
+
 📍 Location: Cairo, Egypt
+
 🔗 LinkedIn: https://shorturl.at/RRjRR
 
 ---
